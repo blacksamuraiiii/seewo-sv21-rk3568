@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/blacksamuraiiii/istoreos
   REPO_BRANCH: istoreos-23.05
-  FEEDS_CONF: istoreos/feeds.conf.default
+  FEEDS_CONF: istoreos/feeds.conf
   CONFIG_FILE: istoreos/.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
