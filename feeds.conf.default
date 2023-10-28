@@ -10,4 +10,5 @@ src-git helloworld https://github.com/fw876/helloworld.git
 #src-link custom /usr/src/openwrt/custom-feed
 # istore
 src-git store https://github.com/linkease/istore.git;main
-
+src-git nas https://github.com/linkease/nas-packages.git;master
+src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main
