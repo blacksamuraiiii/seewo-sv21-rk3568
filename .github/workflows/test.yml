@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/blacksamuraiiii/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -67,11 +67,6 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-
-    - name: DRM_PANFROST
-      run: |
-        cd openwrt/target/linux/rockchip/armv8
-        echo "CONFIG_DRM_PANFROST=y" >> config-5.15
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
