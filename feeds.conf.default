@@ -10,6 +10,4 @@ src-git helloworld https://github.com/fw876/helloworld.git
 #src-link custom /usr/src/openwrt/custom-feed
 # istore
 src-git store https://github.com/linkease/istore.git;main
-# argon, etc.
-src-git third https://github.com/jjm2473/openwrt-third.git;main
 
