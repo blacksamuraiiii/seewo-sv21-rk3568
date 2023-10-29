@@ -74,6 +74,18 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
+    - name: replace argon theme
+      run: |
+        cd openwrt/package/lean
+        rm -rf luci-theme-argon
+        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
+        
+    - name: gpu patch
+      run: |
+        cd openwrt
+        wget https://raw.githubusercontent.com/blacksamuraiiii/seewo-sv21-rk3568/main/seewo-sv21-3568.patch
+        git apply seewo-sv21-3568.patch
+        
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
