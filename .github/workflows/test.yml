@@ -74,11 +74,16 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: replace argon theme
+    - name: rm&git argon theme
       run: |
         cd openwrt/feeds/luci/themes
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
+        
+    - name: replace argon theme
+      run: |
+        cd openwrt/feeds/luci/collections/luci/
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/' Makefile
         
     - name: gpu patch
       run: |
