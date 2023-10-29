@@ -83,8 +83,6 @@ jobs:
     - name: gpu patch
       run: |
         cd openwrt
-        wget https://github.com/immortalwrt/immortalwrt/commit/c10101fc0cf186196a354a91a75bf2856630dd68.patch
-        git apply c10101fc0cf186196a354a91a75bf2856630dd68.patch
         
     - name: Load custom configuration
       run: |
