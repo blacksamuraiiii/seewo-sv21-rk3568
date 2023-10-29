@@ -76,7 +76,7 @@ jobs:
 
     - name: replace argon theme
       run: |
-        cd openwrt/package/lean
+        cd openwrt/feeds/luci/themes
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
         
