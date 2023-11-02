@@ -89,7 +89,7 @@ jobs:
       run: |
         cd openwrt/target/linux/rockchip/armv8/
         rm config-5.15
-        wget https://raw.githubusercontent.com/blacksamuraiiii/seewo-sv21-rk3568/main/config-5.15
+        wget https://github.com/blacksamuraiiii/seewo-sv21-rk3568/edit/main/.github/workflows/test.yml
         
     - name: Load custom configuration
       run: |
