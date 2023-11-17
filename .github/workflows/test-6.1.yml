@@ -93,8 +93,8 @@ jobs:
     - name: gpu patch
       run: |
         cd openwrt/target/linux/rockchip/armv8/
-        rm config-5.15
-        wget https://raw.githubusercontent.com/blacksamuraiiii/seewo-sv21-rk3568/main/test/config-5.15
+        rm config-6.1
+        wget https://raw.githubusercontent.com/blacksamuraiiii/seewo-sv21-rk3568/main/test/config-6.1
         
     - name: Load custom configuration
       run: |
